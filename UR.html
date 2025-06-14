@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <body style="background-image:url('img/online\ smile.jpg');"></body>
+    <title>Shopping</title>
+    <link rel="icon" href="img/e-commerce.jpg">
+</head>
+<body style="background-color:cornsilk;"></body>
+        <h1 style="color:red">📱RITHI ONLINY SHOPPY STORE🛍️🛒</h1>
+        <p>MRBS - MASTER RATE BEST SELLING Platform</p>
+        <hr>
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      display: none;
+    }
+
+    .box.active {
+      display: block;
+    }
+
+    h2, h1 {
+      color: #4CAF50;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background: #45a049;
+    }
+
+    .welcome-msg {
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box active" id="registerBox">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+  <div class="box" id="welcomeBox">
+    <h1>🎉 Welcome!</h1>
+    <p class="welcome-msg">Your registration was successful.</p>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const registerBox = document.getElementById('registerBox');
+    const welcomeBox = document.getElementById('welcomeBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      registerBox.classList.remove('active');
+      welcomeBox.classList.add('active');
+    });
+  </script>
+
+</body>
+</html>
